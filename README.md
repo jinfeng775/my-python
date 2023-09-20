@@ -21,5 +21,8 @@ https://blog.csdn.net/Dontla/article/details/131474870
 ```
 pyinstaller start.spec   
 ```
+打包完毕后需要将文件 `nb_log_config.py` 文件放入打包好的文件下面.dist\start\里面,这是快捷配置日志级别的入口
+
+然后运行`start.exe` 就行了
 
 
