@@ -13,12 +13,13 @@ app = Flask(__name__)
 # logger.critical('血红色，说明发生了严重错误 ')
 @app.route('/')
 def hello_world():
-    return 'hello world'
+    return 'hello world,你好世界'
 
 
 @app.route('/login', methods=['POST'])
 def register():
     logger.warning(request.stream.read())
+
     return util.response(message='213')
 
 
