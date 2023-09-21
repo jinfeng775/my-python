@@ -1,0 +1,4 @@
+flask
+nb_log
+pyinstaller
+pymongo
