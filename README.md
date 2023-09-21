@@ -7,9 +7,7 @@ https://github.com/jinfeng775/my-win10
 
 ### 初始化
 ```
-pip3 install flask
-pip3 install nb_log
-pip3 install pyinstaller
+pip3 install -r requirements.txt
 ```
 ## pyinstaller
 PyInstaller是一个用于将Python脚本打包成独立可执行文件的工具。它的原理是将Python脚本及其依赖的库、资源文件等打包成一个单独的可执行文件，使得在其他机器上运行时不需要安装Python解释器和相关库，即可直接运行。

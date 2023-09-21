@@ -2,16 +2,16 @@
 
 
 block_cipher = None
-
+SETUP_DIR = 'E:\\12313123\\pythonTest\\HelloWorld\\static\\app\\'
 
 a = Analysis(
     ['start.py',
-    'response.py',
+    SETUP_DIR + 'response.py'
     ],
     pathex=[],
     binaries=[],
     datas=[],
-    hiddenimports=['flask','nb_log'],
+    hiddenimports=['flask','nb_log','pymongo'],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
