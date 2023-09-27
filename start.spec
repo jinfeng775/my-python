@@ -6,7 +6,8 @@ SETUP_DIR = 'E:\\12313123\\pythonTest\\HelloWorld\\static\\app\\'
 
 a = Analysis(
     ['start.py',
-    SETUP_DIR + 'response.py'
+    SETUP_DIR + 'response.py',
+    SETUP_DIR + 'mongoClient.py',
     ],
     pathex=[],
     binaries=[],
