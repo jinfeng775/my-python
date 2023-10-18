@@ -2,7 +2,7 @@
 from flask import jsonify
 
 
-def response(code=200, message='', data=None):
+def response(code=20000, message='', data=None):
     """
     自定义返回结果的封装函数
     :param code: 状态码，默认为 200
@@ -13,6 +13,6 @@ def response(code=200, message='', data=None):
     response_data = {
         'code': code,
         'message': message,
-        'data': data
+        'data': data,
     }
     return jsonify(response_data)

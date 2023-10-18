@@ -27,7 +27,13 @@ class MongoDB:
         db = client[name]
         return db
 
+
     def insert_one(self, db_name, collection_name, doc):
+        '''查询单个数据\n
+        db_name:表名\n
+        collection_name:集合名字\n
+        doc:数据
+        '''
         try:
             db = self.get_database(db_name)
             collection = db[collection_name]
@@ -35,6 +41,7 @@ class MongoDB:
             return id.inserted_id
         except Exception as e:
             logger.error(f'向数据库插入单个报错了~表名---> {db_name} 集合名字---> {collection_name}: 错误内容--->{e}')
+    # 插入多个数据
     def insert_many(self, db_name, collection_name, doc):
         try:
             db = self.get_database(db_name)
@@ -43,7 +50,7 @@ class MongoDB:
             return id.inserted_ids
         except Exception as e:
             logger.error(f'向数据库插入多个报错了~表名---> {db_name} 集合名字---> {collection_name}: 错误内容--->{e}')
-
+    # 查询单个数据
     def select_one_collection(self,db_name,collection_name,doc=None):#获取一条数据
         '''search_col：只能是dict类型,key大于等于一个即可，也可为空
         可使用修饰符查询：{"name": {"$gt": "H"}}#读取 name 字段中第一个字母 ASCII 值大于 "H" 的数据
@@ -105,3 +112,4 @@ class MongoDB:
     def close(self):
         self.client.close()
         self.pool.shutdown()
+

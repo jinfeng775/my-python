@@ -1,9 +1,10 @@
-from static.app import mongoClient
-mongo = mongoClient.MongoDB()
-import random
-id = mongo.insert_one('test','123',{
-        'id': random.randint(1,99999),
-        'name': random.randint(1,99999),
-})
-print(id)
-mongo.close()
+# 导入Flask类
+from flask import Blueprint
+
+simple = Blueprint('simple', __name__, template_folder='templates')
+
+
+# @app.route('/model_compare')
+@simple.route('/model_compare', methods=['GET'])
+def hello_world():
+    return 'Hello, model_compare!'

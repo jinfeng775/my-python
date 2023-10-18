@@ -2,17 +2,20 @@
 
 
 block_cipher = None
-SETUP_DIR = 'E:\\12313123\\pythonTest\\HelloWorld\\static\\app\\'
+SETUP_APP = 'E:\\12313123\\pythonTest\\HelloWorld\\static\\app\\'
+SETUP_USER = 'E:\\12313123\\pythonTest\\HelloWorld\\static\\user\\'
 
 a = Analysis(
     ['start.py',
-    SETUP_DIR + 'response.py',
-    SETUP_DIR + 'mongoClient.py',
+    SETUP_APP + 'response.py',
+    SETUP_APP + 'mongoClient.py',
+    SETUP_APP + 'uploadImage.py',
+    SETUP_USER + 'user.py',
     ],
     pathex=[],
     binaries=[],
     datas=[],
-    hiddenimports=['flask','nb_log','pymongo'],
+    hiddenimports=['flask','nb_log','pymongo','flask-jwt-extended','werkzeug'],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
